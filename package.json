@@ -2,11 +2,8 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "second project",
-  "main": "index.js",
+  "main": "src/genDiff.js",
   "type": "module",
-  "bin": {
-    "gendiff": "bin/gendiff.js"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +17,9 @@
     "url": "https://github.com/ToshiKajitsu/frontend-project-lvl2/issues"
   },
   "homepage": "https://github.com/ToshiKajitsu/frontend-project-lvl2#readme",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "dependencies": {
     "commander": "^9.2.0",
     "lodash": "^4.17.21"
