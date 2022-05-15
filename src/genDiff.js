@@ -25,19 +25,19 @@ const genDiff = (filepath1, filepath2) => {
                const value1 = absoluteFile1[key];
                const value2 = absoluteFile2[key];
                if (!_.has(absoluteFile1, key)) {
-                    return ' ' + operators.plus + ' ' + key + ':' + ' ' + value2 + ' ';
+                    return `${operators.plus} ${key}: ${value2}`;
                }
                if (!_.has(absoluteFile2, key)) {
-                    return ' ' + operators.minus + ' ' + key + ':' + ' ' + value1 + ' ';
+                    return `${operators.minus} ${key}: ${value1}\n`;
                }
                if (!_.isEqual(value1, value2)) {
-                    return ' ' + operators.minus + ' ' + key + ':' + ' ' + value1 + ' ' + operators.plus + ' ' + key + ':' + ' ' + value2 + ' ';
+                    return `${operators.minus} ${key}: ${value1} \n${operators.plus} ${key}: ${value2}\n`;
                }
-                    return ' ' + key + ' ' + value1 + ' ';
+                    return `${key} ${value1}\n`;
           });  
      };
-     const result = '{' + build(absoluteFile1, absoluteFile2).join('') + '}';
-     return result;
+     return `{ \n${build(absoluteFile1, absoluteFile2).join('')}\n}`;
+
 }
  
 export default genDiff;
