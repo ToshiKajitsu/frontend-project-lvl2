@@ -29,9 +29,9 @@ const genDiff = (filepath1, filepath2) => {
         return `${operators.minus} ${key}: ${value1}\n`;
       }
       if (!_.isEqual(value1, value2)) {
-        return `${operators.minus} ${key}: ${value1} \n${operators.plus} ${key}: ${value2}\n`;
+        return `${operators.minus} ${key}: ${value1}\n${operators.plus} ${key}: ${value2}\n`;
       }
-      return `${key} ${value1}\n`;
+      return `${key}: ${value1}\n`;
     });
   };
   return `{\n${build(absoluteFile1, absoluteFile2).join('')}\n}`;

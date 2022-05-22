@@ -5,6 +5,8 @@
 
 <a href="https://codeclimate.com/github/ToshiKajitsu/frontend-project-lvl2/maintainability"><img src="https://api.codeclimate.com/v1/badges/4c379bf5c8f6144538e2/maintainability" /></a>
 
+<a href="https://codeclimate.com/github/ToshiKajitsu/frontend-project-lvl2/test_coverage"><img src="https://api.codeclimate.com/v1/badges/4c379bf5c8f6144538e2/test_coverage" /></a>
+
 <h2>Example of the program:</h2>
 
 [![asciicast](https://asciinema.org/a/pjMsRPbyP2VDpRG6yYNuhMHEY.svg)](https://asciinema.org/a/pjMsRPbyP2VDpRG6yYNuhMHEY)
