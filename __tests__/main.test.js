@@ -10,6 +10,7 @@ const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8'
 
 const tests = [
   ['file1.json', 'file2.json', 'diffJson.txt'],
+  ['file1.yaml', 'file2.yaml', 'diffYaml.txt'],
 ];
 
 describe('diff 2 json files', () => {

@@ -1,21 +1,19 @@
-import { readFileSync } from 'fs';
+import fs from 'fs';
 import _ from 'lodash';
 import path from 'path';
+import parsers from './parsers.js';
 
 const operators = { minus: '-', plus: '+' };
 
+const extractPath = (filePath) => {
+  const format = path.extname(filePath);
+  const obj = fs.readFileSync(path.resolve(process.cwd(), filePath.trim()), 'utf-8');
+  return parsers(format, obj);
+};
+
 const genDiff = (filepath1, filepath2) => {
-  let absoluteFile1 = '';
-  let absoluteFile2 = '';
-  if (filepath1.split('').includes('/')) {
-    absoluteFile1 = path.resolve(filepath1);
-    absoluteFile2 = path.resolve(filepath2);
-  } else {
-    absoluteFile1 = path.resolve('__fixtures__', filepath1);
-    absoluteFile2 = path.resolve('__fixtures__', filepath2);
-  }
-  absoluteFile1 = JSON.parse(readFileSync(absoluteFile1, 'utf8'));
-  absoluteFile2 = JSON.parse(readFileSync(absoluteFile2, 'utf8'));
+  const absoluteFile1 = extractPath(filepath1);
+  const absoluteFile2 = extractPath(filepath2);
   const build = (file1, file2) => {
     const keys = Object.keys({ ...file1, ...file2 });
     const sortedKeys = _.sortBy(keys);

@@ -2,11 +2,11 @@ import yaml from 'js-yaml';
 
 export default (format, data) => {
   switch (format) {
-    case 'json':
+    case '.json':
       return JSON.parse(data);
-    case 'yml':
+    case '.yml':
       return yaml.load(data);
-    case 'yaml':
+    case '.yaml':
       return yaml.load(data);
     default:
       throw new Error(`This format is not supported: ${format}`);
