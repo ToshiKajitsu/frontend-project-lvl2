@@ -13,7 +13,7 @@ const extractPath = (filePath) => {
 const genDiff = (filepath1, filepath2) => {
   const absoluteFile1 = extractPath(filepath1);
   const absoluteFile2 = extractPath(filepath2);
-  return `{\n${build(absoluteFile1, absoluteFile2).join('')}\n}`;
+  return build(absoluteFile1, absoluteFile2);
 };
 
 export default genDiff;
