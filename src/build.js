@@ -21,6 +21,6 @@ export default (file1, file2) => {
       return `${key}: ${value1}\n`;
     });
     return result;
-  }
-  return `{\n${deep(file1, file2).join('')}\n}`
+  };
+  return `{\n${deep(file1, file2).join('')}\n}`;
 };
