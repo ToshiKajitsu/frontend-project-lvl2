@@ -1,8 +1,8 @@
 import fs from 'fs';
-// import _ from 'lodash';
 import path from 'path';
 import parsers from './parsers.js';
 import build from './build.js';
+import formatBase from './formatters/format.js';
 
 const extractPath = (filePath) => {
   const format = path.extname(filePath);
@@ -10,10 +10,12 @@ const extractPath = (filePath) => {
   return parsers(format, obj);
 };
 
-const genDiff = (filepath1, filepath2) => {
+const genDiff = (filepath1, filepath2, format = 'stylish') => {
   const absoluteFile1 = extractPath(filepath1);
   const absoluteFile2 = extractPath(filepath2);
-  return build(absoluteFile1, absoluteFile2);
+  const buildTree = build(absoluteFile1, absoluteFile2);
+  const getAnswer = formatBase(buildTree, format);
+  return getAnswer;
 };
 
 export default genDiff;
