@@ -17,12 +17,11 @@
 To start, you need to clone the repository:
 <p>git clone https://github.com/ToshiKajitsu/frontend-project-lvl2.git</p>
 Install with command:
-<p>
-make install
-make publish
-</p>
+<p>make install</p>
+<p>make publish</p>
 Run:
-    <p>gendiff [options] <path_to_file1> <path_to_file2></p>
+<p>gendiff [options] `<path_to_file1> <path_to_file2>`</p>
+
 <h2>Example of the program for JSON flat files:</h2>
 
 [![asciicast](https://asciinema.org/a/pjMsRPbyP2VDpRG6yYNuhMHEY.svg)](https://asciinema.org/a/pjMsRPbyP2VDpRG6yYNuhMHEY)
