@@ -20,7 +20,7 @@ Install with command:
 <p>make install</p>
 <p>make publish</p>
 Run:
-<p>gendiff [options] `<path_to_file1> <path_to_file2>`</p>
+<p>gendiff [options] path_to_file1 path_to_file2 in <> </p>
 
 <h2>Example of the program for JSON flat files:</h2>
 
