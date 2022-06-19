@@ -22,3 +22,7 @@
 <h2>Example of the program for 2 JSON files with the format plain:</h2>
 
 [![asciicast](https://asciinema.org/a/HjNLe5CCzzJxxGyFnYLPWhT3c.svg)](https://asciinema.org/a/HjNLe5CCzzJxxGyFnYLPWhT3c)
+
+<h2>Example of the program for 2 JSON files with the format json:</h2>
+
+[![asciicast](https://asciinema.org/a/CyyzzUBG96WjcTnsv0Hk4VGIl.svg)](https://asciinema.org/a/CyyzzUBG96WjcTnsv0Hk4VGIl)
