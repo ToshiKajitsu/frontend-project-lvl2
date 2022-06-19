@@ -9,9 +9,11 @@ const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', 
 const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
 const tests = [
-  ['file1.json', 'file2.json', 'diffJson.txt', 'stylish'],
-  ['file1.yaml', 'file2.yaml', 'diffYaml.txt', 'stylish'],
-  ['file1.yml', 'file2.yml', 'diffYaml.txt', 'stylish'],
+  ['file1.json', 'file2.json', 'diffStylish.txt', 'stylish'],
+  ['file1.yaml', 'file2.yaml', 'diffStylish.txt', 'stylish'],
+  ['file1.yml', 'file2.yml', 'diffStylish.txt', 'stylish'],
+  ['file1.json', 'file2.json', 'diffJson.txt', 'json'],
+  ['file1.json', 'file2.json', 'diffPlain.txt', 'plain'],
 ];
 
 describe('diff 2 json files', () => {

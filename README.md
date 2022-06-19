@@ -18,3 +18,7 @@
 <h2>Example of the program for JSON/YAML files:</h2>
 
 [![asciicast](https://asciinema.org/a/YV5GSak0esunYm6vIdlbOV5Hj.svg)](https://asciinema.org/a/YV5GSak0esunYm6vIdlbOV5Hj)
+
+<h2>Example of the program for 2 JSON files with the format plain:</h2>
+
+[![asciicast](https://asciinema.org/a/HjNLe5CCzzJxxGyFnYLPWhT3c.svg)](https://asciinema.org/a/HjNLe5CCzzJxxGyFnYLPWhT3c)

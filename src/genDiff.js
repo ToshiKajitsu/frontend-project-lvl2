@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import parsers from './parsers.js';
 import build from './build.js';
-import formatBase from './formatters/format.js';
+import formatBase from './formatters/index.js';
 
 const extractPath = (filePath) => {
   const format = path.extname(filePath);
