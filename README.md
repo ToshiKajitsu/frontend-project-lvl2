@@ -11,22 +11,18 @@
 <h3>A difference calculator is a program that determines the difference between two data structures.</h3>
 <h3>Utility features:</h3>
 <h4>
-* Support for different input formats: yaml, json
-* Report generation in the form of plain text, stylish and json
+<p>- Support for different input formats: yaml, json</p>
+<p>- Report generation in the form of plain text, stylish and json</p>
 </h4>
 To start, you need to clone the repository:
-```
-    git clone https://github.com/ToshiKajitsu/frontend-project-lvl2.git
-```
+<p>git clone https://github.com/ToshiKajitsu/frontend-project-lvl2.git</p>
 Install with command:
-```
-    make install
-    make publish
-```
+<p>
+make install
+make publish
+</p>
 Run:
-```
-    gendiff [options] <path/to/file1> <path/to/file2>
-```
+    <p>gendiff [options] <path_to_file1> <path_to_file2></p>
 <h2>Example of the program for JSON flat files:</h2>
 
 [![asciicast](https://asciinema.org/a/pjMsRPbyP2VDpRG6yYNuhMHEY.svg)](https://asciinema.org/a/pjMsRPbyP2VDpRG6yYNuhMHEY)
