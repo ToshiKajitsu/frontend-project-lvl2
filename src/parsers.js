@@ -1,8 +1,8 @@
 import yaml from 'js-yaml';
 
 export default (format, data) => {
-  const gettFormat = format.split('.')[1];
-  switch (gettFormat) {
+  const getFormat = format.split('.')[1];
+  switch (getFormat) {
     case 'json':
       return JSON.parse(data);
     case 'yml':
