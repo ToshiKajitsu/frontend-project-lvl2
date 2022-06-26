@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 const build = (file1, file2) => {
-  const keys = Object.keys({ ...file1, ...file2 });
+  const keys = _.union(_.keys(file1), _.keys(file2));
   const sortedKeys = _.sortBy(keys);
   return sortedKeys.map((key) => {
     const value1 = file1[key];
