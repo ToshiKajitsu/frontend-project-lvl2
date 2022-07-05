@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const build = (file1, file2) => {
+const createDiff = (file1, file2) => {
   const keys = _.union(_.keys(file1), _.keys(file2));
   const sortedKeys = _.sortBy(keys);
   return sortedKeys.map((key) => {
@@ -13,7 +13,7 @@ const build = (file1, file2) => {
       return { type: 'remove', key, val: value1 };
     }
     if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
-      return { type: 'recursion', key, children: build(value1, value2) };
+      return { type: 'recursion', key, children: createDiff(value1, value2) };
     }
     if (!_.isEqual(value1, value2)) {
       return {
@@ -24,4 +24,4 @@ const build = (file1, file2) => {
   });
 };
 
-export default build;
+export default createDiff;
