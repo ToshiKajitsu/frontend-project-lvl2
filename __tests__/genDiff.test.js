@@ -31,7 +31,7 @@ test.each(extensions)('Compare files stylish format', (extension) => {
   expect(genDiff(beforeFullPath, afterFullPath, 'stylish')).toEqual(stylishResult);
 });
 
-test.each(extensions)('Compare files default format', (extension) => {
+test.each(extensions)('Compare files default', (extension) => {
   const beforeFullPath = `${process.cwd()}/__fixtures__/file1.${extension}`;
   const afterFullPath = `${process.cwd()}/__fixtures__/file2.${extension}`;
   expect(genDiff(beforeFullPath, afterFullPath)).toEqual(stylishResult);
