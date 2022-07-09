@@ -13,26 +13,13 @@ const jsonResult = readFile(getFixturePath('diffJson.txt'));
 
 const extensions = ['yml', 'yaml', 'json'];
 
-test.each(extensions)('Compare files plain format', (extension) => {
-  const beforeFullPath = `${process.cwd()}/__fixtures__/file1.${extension}`;
-  const afterFullPath = `${process.cwd()}/__fixtures__/file2.${extension}`;
-  expect(genDiff(beforeFullPath, afterFullPath, 'plain')).toEqual(plainResult);
-});
-
-test.each(extensions)('Compare files json format', (extension) => {
-  const beforeFullPath = `${process.cwd()}/__fixtures__/file1.${extension}`;
-  const afterFullPath = `${process.cwd()}/__fixtures__/file2.${extension}`;
-  expect(genDiff(beforeFullPath, afterFullPath, 'json')).toEqual(jsonResult);
-});
-
-test.each(extensions)('Compare files stylish format', (extension) => {
-  const beforeFullPath = `${process.cwd()}/__fixtures__/file1.${extension}`;
-  const afterFullPath = `${process.cwd()}/__fixtures__/file2.${extension}`;
-  expect(genDiff(beforeFullPath, afterFullPath, 'stylish')).toEqual(stylishResult);
-});
-
-test.each(extensions)('Compare files default format', (extension) => {
-  const beforeFullPath = `${process.cwd()}/__fixtures__/file1.${extension}`;
-  const afterFullPath = `${process.cwd()}/__fixtures__/file2.${extension}`;
-  expect(genDiff(beforeFullPath, afterFullPath)).toEqual(stylishResult);
+describe('Checking for the correct difference', () => {
+  test.each(extensions)('Compare files', (extension) => {
+    const beforeFullPath = `${process.cwd()}/__fixtures__/file1.${extension}`;
+    const afterFullPath = `${process.cwd()}/__fixtures__/file2.${extension}`;
+    expect(genDiff(beforeFullPath, afterFullPath, 'stylish')).toEqual(stylishResult);
+    expect(genDiff(beforeFullPath, afterFullPath, 'plain')).toEqual(plainResult);
+    expect(genDiff(beforeFullPath, afterFullPath, 'json')).toEqual(jsonResult);
+    expect(genDiff(beforeFullPath, afterFullPath)).toEqual(stylishResult);
+  });
 });
